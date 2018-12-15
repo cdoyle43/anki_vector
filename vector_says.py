@@ -14,9 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Vector Say
+"""
+Vector Say
 
-Simple script to make Vector say whatever you time into the terminal.
+Simple script to make Vector say whatever you type into the terminal.
+Update, change eye colour to red while talking
 """
 
 import anki_vector
@@ -29,8 +31,7 @@ def main():
     
     args = anki_vector.util.parse_command_args()
     with anki_vector.Robot(args.serial) as robot:
-        # print("Say 'hey siri'...")
-        # robot.say_text("Hey Siri, play beats one")
+        robot.behavior.set_eye_color(hue=0.00, saturation=0.76)
         print(say)
         robot.say_text(say)
 
