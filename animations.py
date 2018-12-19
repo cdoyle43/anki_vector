@@ -14,7 +14,8 @@ def main():
     #         print(anim_name)
 
     with anki_vector.Robot() as robot:
-        robot.anim.play_animation('anim_eyepose_squint', 10)
+        robot.anim.play_animation('anim_dancebeat_headliftbody_back_01')
+        # robot.anim.play_animation('anim_eyepose_squint', 10)
 
 
 if __name__ == "__main__":
